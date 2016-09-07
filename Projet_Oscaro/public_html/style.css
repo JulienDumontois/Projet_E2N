@@ -1,0 +1,51 @@
+.pa_left {
+    float: left;
+    width: 140px;
+    padding-left: 30px;
+}
+.pa_right {
+    text-align: right;
+}
+.pa_basse {
+    padding-top: 5px;
+    color:#144A82;
+}
+.pa_ul {
+    padding-top: 20px;
+    list-style-type: none;
+    border-top: 1px solid #CACACA;
+}
+.pa_li {
+    height: 25px;
+    text-decoration: none;
+}
+.pa_a {
+    color:#144A82;
+}
+.pa_a:link {
+    text-decoration: none;
+}
+.pa_freinage {
+    padding-top: 15px;
+}
+.pa_echappement {
+    padding-top: 15px;
+}
+.pa_filtration {
+    padding-top: 15px;
+}
+.pa_visibilite {
+    padding-top: 15px;
+}
+.pa_outillage {
+    padding-top: 15px;
+}
+.pa_embrayages {
+    padding-top: 15px;
+}
+.pa_h3 {
+    font-size: 24px;
+}
+.pa_h2 {
+    font-size: 20px;
+}

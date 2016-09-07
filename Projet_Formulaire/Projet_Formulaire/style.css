@@ -1,0 +1,35 @@
+h1 {
+    float: left;
+    font-size: 30px;
+}
+h2 {
+    float: left;
+    font-size: 20px;
+    margin-top: 29px;
+    color: gray;
+}
+.nom {
+    margin-top: 20px;
+}
+.prenom {
+    margin-top: 20px;
+}
+.adresse {
+    margin-top: 20px;
+}
+.phone {
+    margin-top: 20px;
+}
+.mail {
+    margin-top: 20px;
+}
+#ajout {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color : #ffffff;
+    background : #5BB85D;
+    border-radius : 5px;
+    padding-top: 8px;
+}
+

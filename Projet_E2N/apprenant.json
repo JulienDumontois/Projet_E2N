@@ -1,0 +1,182 @@
+[
+    {
+        "src_img": "assets/images/julien1.JPG",
+        "name": "Julien D.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/juliendumontois/",
+        "linkedin": "https://fr.linkedin.com/in/julien-dumontois-5b854b77",
+        "mail": "julien.dumontois@gmail.com",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/remy1.JPG",
+        "name": "Remy D.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/remy60",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": "http://remy60.github.io/"
+    },
+    {
+        "src_img": "assets/images/pierre1.JPG",
+        "name": "Pierre L.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/lesage60400/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/lina1.JPG",
+        "name": "Lina M.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/lina1989/",
+        "linkedin": " https://fr.linkedin.com/in/lina-mampoko-9b1500127",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/saloua1.JPG",
+        "name": "Saloua K.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/SalouaK/",
+        "linkedin": "https://fr.linkedin.com/in/saloua-kachi-3111b6ab",
+        "mail": "saloua.kachi@gmail.com",
+        "cv": "http://salouak.github.io/"
+    },
+    {
+        "src_img": "assets/images/justine1.JPG",
+        "name": "Justine F.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/JustineFrs/",
+        "linkedin": "https://fr.linkedin.com/in/justine-frasier-801692123",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {      
+        "src_img": "assets/images/june1.JPG",
+        "name": "Sarah S.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/june-so/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/mimoun1.JPG",
+        "name": "Mimoun B.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/Mimoun60/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/marielaure1.JPG",
+        "name": "Marie-Laure M.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/marielaure60/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/alexis1.JPG",
+        "name": "Alexis L.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/alexis60/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": "http://alexis60.github.io/"
+    },
+    {
+        "src_img": "assets/images/antoine1.jpg",
+        "name": "Antoine M.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/AntoineMam/",
+        "linkedin": "https://www.linkedin.com/in/antoine-mammam-web-dev",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": "http://antoinemam.github.io/"
+    },
+    {
+        "src_img": "assets/images/maryse1.JPG",
+        "name": "Maryse C.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/maryse-caron60400/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/jeanphil1.JPG",
+        "name": "Jean-Philippe D.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/jean-philippe60640/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    { 
+        "src_img": "assets/images/anthony1.JPG",
+        "name": "Anthony T.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/antho60/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/davy1.JPG",
+        "name": "Davy B.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/DavyBajdek/",
+        "linkedin": "https://www.linkedin.com/in/davy-bajdek-7a2335b0",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": "http://davybajdek.github.io"
+    },
+    {
+        "src_img": "assets/images/maite1.JPG",
+        "name": "Maïté G.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/maite1/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/mathieu1.JPG",
+        "name": "Mathieu A.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/matieua/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/matthieu1.JPG",
+        "name": "Matthieu D.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/ScofeeZ/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/maxime1.JPG",
+        "name": "Maxime M.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/madrid13/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    },
+    {
+        "src_img": "assets/images/david1.JPG",
+        "name": "David L.",
+        "desc_student": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "github": "https://github.com/davlab1107/",
+        "linkedin": "",
+        "mail": "http://formation.novei.fr/contacts.php",
+        "cv": ""
+    }
+]

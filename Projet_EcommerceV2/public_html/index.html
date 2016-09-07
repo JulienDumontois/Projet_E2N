@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hollywood Jams: On vous vends du rêve! </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="styleJams.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    </head>
+    <body ng-app="jamsProduct">
+        <header>        
+            <div class="container-fluid">   
+                <div class="row" id="HomePage">
+                    <div class="col-lg-2 col-md-2">
+                        <img src="assets/images/jams-logo-blue-150x107.jpg" alt=""/>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <h1 class="jamsCorp">JAMS Corp</h1>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 user-link">
+                        <i class="fa fa-user " aria-hidden="true"></i> <a href="#">Connexion</a>
+                        <ngcart-summary></ngcart-summary>
+                    </div>
+                </div>
+
+            </div>  
+            <div class="row"> 
+                <div class="col-lg-12 col-md-12 col-sm-9 col-xs-9">
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container">
+                            <ul class="nav navbar-nav"><!--aligner le menu-->
+                                <li><a href="#HomePage" class="homePage" onclick="afficher3()">Accueil</a></li>
+                                <li><a href="#Catalogue" class="catalogue" onclick="afficher()">Nos produits</a></li>
+                                <li><a href="#History" class="history" onclick="afficher1()">Notre histoire</a></li>
+                                <li><a href="#Contact" class="contact" onclick="afficher2()">Nous contacter</a></li>
+                            </ul>
+                        </div><!-- /.container -->
+                    </nav>
+                </div>
+            </div> 
+            <div class="row back">
+                <div class="col-lg-4">
+                    <img class="pixHeader" src="assets/images/Dolorean.jpg" alt=""/>
+                </div>
+                <div class="col-lg-8">
+                    <h2 class="jamsCorp1" >Hollywood JAMS</h2>
+                    <h4 class="title">On vous vend du rêve !!!</h4>
+                    <p class="paragraphe">Découvrez vite notre site Hollywood JAMS, objets originaux en vente directe.</p>
+                </div>
+            </div>
+        </div> <!--fermeture container fluid -->
+    </header>
+
+    <!--PRODUITS PHARES-->
+    <div class="container-fluid"> 
+        <div class="row" id="BestProduct">
+            <div ng-controller="bandeauController">  <!--Le controller Produit Phares-->
+                <h2 class="FirstHead">Nos Produits Phares</h2>
+                <div class="col-lg-3 Product" ng-repeat="bandeau in bandeaux">
+                    <img src="{{bandeau.src_img}}" class="mainPict"/>
+                    <h2>{{bandeau.title_product}}</h2>
+                    <h3>{{bandeau.movie_product}}</h3>
+                    <p>{{bandeau.desc_product}}</p>
+                    <p>{{bandeau.price_product}}</p>
+                    <ngcart-addtocart id="{{bandeau.title_product}}" name="{{bandeau.title_product}} - {{bandeau.movie_product}}" price="{{bandeau.price_product}}" quantity="1">Ajouter au panier </ngcart-addtocart>
+                </div>
+            </div>
+        </div>
+
+        <!--CATALOGUE-->
+        <div id="Catalogue" style="display: none"> 
+                <h2 class="FirstHead">Catalogue</h2>
+                <div ng-controller="filesController"> <!--Le controller Fiche produit-->
+            <div ng-repeat="filesDetails in FilesProduct1">
+                <div class="row productFiles"> 
+                    <h2 class="TitleinMiddle">{{filesDetails.title_product}} - {{filesDetails.movie_product}}</h2>
+                    <div class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2">
+                        <img alt="{{filesDetails.title_product}}" src="{{filesDetails.src_img}}" class="mainPict"/>
+                    </div><!-- /. Col2-->
+                    <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                        <br> <p>{{filesDetails.desc_product}}</p> 
+                        <p>{{filesDetails.ref_product}}</p>
+                        <p>{{filesDetails.authenticity_product}}</p>
+                        <p>{{filesDetails.creation_product}}</p>
+                        <p>{{filesDetails.shooting_product}}</p>
+                    </div><!-- /. Col5-->
+                    <div class="col-lg-3">
+                        <h3>{{filesDetails.price_product}}</h3>
+                        <ngcart-addtocart id="{{filesDetails.title_product}}" name="{{filesDetails.title_product}} - {{filesDetails.movie_product}}" price="{{filesDetails.price_product}}" quantity="1">Ajouter au panier </ngcart-addtocart>
+                    </div><!-- /. Col2 Bouton panier-->
+                </div><!-- /. NG-REPEAT-->
+            </div> <!-- /. NG-CONTROLLER-->
+        </div><!--/.Row-->
+        <!--/.CATALOGUE-->
+        <hr/> <!--Ligne avant le panier-->
+
+        <!--Panier -->
+        <div id="basket" style="display: none">
+            <h3>Mon Panier</h3>
+            <ngcart-cart></ngcart-cart>
+            <hr/>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Paypal</h4>
+                    <ngcart-checkout service="paypal" settings="payPalSettings"></ngcart-checkout>
+                </div> 
+            </div> <!-- /. row-->
+        </div><!-- /. id Basket-->
+
+        <!--HISTOIRE-->
+        <div id="story" style="display: none">
+            <div ng-controller="historyController">
+                <div ng-repeat="parafHistory in history">
+                    <h2 class="FirstHead">Notre histoire</h2>
+                    <p>{{parafHistory.presentation}}</p>
+                </div>
+            </div> <!-- /.NG-CONTROLLER HISTORYCONTROLLER-->
+        </div><!-- /.Id story-->
+
+        <!-- Page Contact -->
+        <div id="Contact" style="display: none"> 
+            <h3 class="col-md-offset-1 Title"><i class="fa fa-users icons"></i> Nous Contacter </h3>
+            <form>
+                <div class="row">
+                    <div class="col-md-offset-1 col-lg-5 col-md-5 ">
+                        <div class="form-group">
+                            <label for="FullnameForm">Nom et Prénom</label><input id="FullnameForm" class="form-control" type="text" placeholder="Entrez votre Nom et Prénom">
+                        </div>
+                    </div>
+                    <div class=" col-lg-5 col-md-5">
+                        <div class="form-group">
+                            <label for="CompanyForm">Entreprise</label><input id="CompanyForm" class="form-control" type="text" placeholder="Entrez votre Entreprise">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-lg-5 col-md-5">
+                        <div class="form-group">
+                            <label for="EmailForm">Email</label><input id="EmailForm" class="form-control" type="email" placeholder="Entrez votre Email">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="form-group">
+                            <label for="PhoneForm">Numéro de téléphone </label><input id="PhoneForm" class="form-control" type="text" placeholder="Entrez votre numéro">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-lg-10 form-group">
+                    <label for="MessageForm">Message</label>
+                    <textarea id="MessageForm" class="form-control" placeholder="Entrez votre Message" rows="8"></textarea>
+                </div>
+                <button class="btn btn-Jams btn-lg col-md-offset-1" id="send" type="submit"> <i class="fa fa-paper-plane "></i> Envoyer</button>
+            </form>
+        </div><!-- /. ID COntact-->
+    </div><!-- /.Container-fluid-->
+
+    <!-- Panier en haut à droite-->
+    <script type="text/ng-template" id="template/ngCart/summary.html">
+        <div class="container-fluid">
+        <div class="row user-link">
+
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i><a href='#' onclick="panier()"> Mon Panier </a> 
+        <div>{{ ngCart.getTotalItems() }}
+        <ng-pluralize count="ngCart.getTotalItems()" when="{1: 'produit', 'other':'produits'}"></ng-pluralize>
+        {{ ngCart.totalCost() | currency }}
+        </div>
+        </div>
+        </div>
+    </script>
+    <!-- /.Panier du Haut-->
+
+    <!-- Le panier Complet-->
+    <script type="text/ng-template" id="template/ngCart/cart.html">
+        <div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
+        Ton panier est vide tocard. Retourne acheter quelque chose sale pauvre ou casse toi!
+        </div>
+        <div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
+        <table class="table table-striped ngCart cart">
+        <thead>
+        <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Montant</th>
+        <th>Montant Total</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr ng-show="ngCart.getTax()">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>TVA ({{ ngCart.getTaxRate() }}%):</td>
+        <td>{{ ngCart.getTax() | currency }}</td>
+        </tr>
+        <tr ng-show="ngCart.getShipping()">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Frais de ports :</td>
+        <td>{{ ngCart.getShipping() | currency }}</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total:</td>
+        <td>{{ ngCart.totalCost() | currency }}</td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <tr ng-repeat="item in ngCart.getCart().items track by $index">
+        <td><span ng-click="ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span></td>
+        <th></th>
+        <td>{{ item.getName() }}</td> 
+        {{ item.getQuantity() | number }}&nbsp;&nbsp;
+        <td>{{ item.getPrice() | currency}}</td>
+        <td>{{ item.getTotal() | currency }}</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+    </script> <!-- /.Panier Complet-->
+
+    <!-- Bandeau Alert apres avoir ajouté un produit-->
+    <script type="text/ng-template" id="template/ngCart/addtocart.html"><div ng-hide="attrs.id">
+        <a class="btn btn-lg btn-primary" ng-disabled="true" ng-transclude></a>
+
+        </div>
+        <div ng-show="attrs.id">
+        <div>
+
+        <a class="btn btn-sm btn-Jams"
+        ng-click="ngCart.addItem(id, name, price, q, data)"
+        ng-transclude></a>
+        </div>
+        <mark  ng-show="inCart()">
+        Ce poduit est dans votre panier. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Retirer</a>
+        </mark>
+        </div>
+    </script>   <!-- /.Bandeau Alert apres avoir ajouté un produit-->
+
+    <!--Bouton Paypal -->
+    <script type="text/ng-template" id="template/ngCart/checkout.html">
+
+        <div ng-if="service=='http' || service == 'log'">
+        <button class="btn btn-primary" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+        </div>
+
+
+        <div ng-if="service=='paypal'">
+
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" ng-show="ngCart.getTotalItems()">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="{{ settings.paypal.business }}">
+        <input type="hidden" name="lc" value="CA">
+        <input type="hidden" name="item_name" value="{{ settings.paypal.item_name }}">
+        <input type="hidden" name="item_number" value="{{ settings.paypal.item_number }}">
+        <input type="hidden" name="amount" value="{{ ngCart.getSubTotal()}}">
+        <input type="hidden" name="currency_code" value="{{ settings.paypal.currency_code }}">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="tax_rate" value="{{ ngCart.getTaxRate()}}">
+        <input type="hidden" name="shipping" value="{{ ngCart.getShipping()}}">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        </div>
+
+    </script>
+    <footer>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4 text-center" id="contenu_footer">
+                    <h3>Venez nous rendre visite!</h3>
+                    <p>JAMS Corp<br>21 Jump Street<br>Zone 51<br>555-0156874963</p>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <p>Hollywood JAMS 2016 - © Copyright JAMS Corp..<br></p>
+                </div>
+            </div><!--class "row" du footer-->
+        </div><!--container-fluid du footer-->
+    </footer>
+
+
+    <script src="assets/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/lib/angular/angular.min.js" type="text/javascript"></script>
+    <script src="assets/lib/ngCart/dist/ngCart.js" type="text/javascript"></script>
+    <script src="assets/lib/ngCart/src/ngCart.directives.js" type="text/javascript"></script>
+    <script src="assets/lib/ngCart/src/ngCart.fulfilment.js" type="text/javascript"></script>
+    <script src="angularJams.js" type="text/javascript"></script>
+</body>
+</html>

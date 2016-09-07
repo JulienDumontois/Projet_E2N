@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HollywoodJAMS.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <script src="public_html/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+        <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="Class.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="container-fluid">
+                <div class="row" id="HomePage">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-link"> <!--Ligne de connexion et mon panier-->
+                        <i class="fa fa-user" aria-hidden="true"></i> <a href="#">Connexion</a>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <a href="#">Mon panier (0)</a>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-9 col-xs-9">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container">
+                                <ul class="nav navbar-nav"><!--aligner le menu-->
+                                    <li><a href="#HomePage" class="homePage">Accueil</a></li>
+                                    <li><a href="#Catalogue" class="catalogue" onclick="afficher()">Nos produits</a></li>
+                                    <li><a href="#History" class="history" onclick="afficher()">Notre histoire</a></li>
+                                    <li><a href="#Contact" class="contact" onclick="afficher()">Nous contacter</a></li>
+                                </ul>
+                            </div><!-- /.container -->
+                        </nav>
+                    </div>
+                </div>
+                <div class="row back">
+                    <div class="col-lg-6">
+                        <img class="pixHeader" src="bower_components/images/Render-Dolorean.png" alt=""/>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1>Hollywood JAMS</h1>
+                        <h4>On vous vend du rêve !!!</h4>
+                        <p>Découvrez notre site Hollywood JAMS, avec ses objets originaux en vente directe.</p>
+                    </div>
+                </div>
+            </div> <!--fermeture container fluid -->
+
+        </header>
+        <div class="container-fluid">
+            <!-- Bandeau Produits Phare-->
+
+            <div>
+                <section class="BestProduct">
+                    <h2 class="FirstHead">Nos Produits Phares</h2>
+                    <article class="col-lg-3 product"> <!--Produit n°1 - La malette de Marcelus Wallace - Pulp Fiction -->
+                        <img class="mainPict" title="La malette de Marcelus Wallace - Pulp Fiction" alt="La malette de Marcelus Wallace - Pulp Fiction" src="bower_components/images/Malette_pulp_fiction2.jpg" />
+                        <h3><a href="#">La malette de Marcelus Wallace - Pulp Fiction</a></h3>
+                        <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                        <a href="#" class="price btn btn-default">300€</a>
+                        <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                    </article><!-- fin Produit n°1 - La malette de Marcelus Wallace - Pulp Fiction -->
+
+                    <article class="col-lg-3"> <!--Produit n°2 - La planche de Rose Dawson - Titanic-->
+                        <img class="mainPict" title="La planche de Rose Dawson - Titanic" alt="La planche de Rose Dawson - Titanic" src="bower_components/images/leoplanche2.jpeg" />
+                        <h3><a href="#">La planche de Rose Dawson - Titanic</a></h3>
+                        <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                        <a href="#" class="price btn btn-default">300€</a>
+                        <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                    </article><!-- fin Produit n°2 - La planche de Rose Dawson - Titanic -->
+
+                    <article class="col-lg-3"> <!--Produit n°3 - Le rasoir de Mr. Brown - Reservoir Dogs -->
+                        <img class="mainPict" title="Le rasoir de Mr. Brown - Reservoir Dogs" alt="Le rasoir de Mr. Brown - Reservoir Dogs" src="bower_components/images/reservoirdogs42.jpg" />
+                        <h3><a href="#">Le rasoir de Mr. Brown - Reservoir Dogs</a></h3>
+                        <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                        <a href="#" class="price btn btn-default">300€</a>
+                        <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                    </article><!-- fin Produit n°3 - Le rasoir de Mr. Brown - Reservoir Dogs -->
+
+                    <article class="col-lg-3"> <!--Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+                        <img class="mainPict" title="La clé de la Porte Rouge - 50 Nuances de Grey" alt="La clé de la Porte Rouge - 50 Nuances de Grey" src="bower_components/images/clés502.jpg" />
+                        <h3><a href="#">La clé de la Porte Rouge - 50 Nuances de Grey</a></h3>
+                        <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                        <a href="#" class="price btn btn-default">300€</a>
+                        <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                    </article><!-- fin Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+                </section>
+            </div>
+            <div id="Catalogue" style="display: none"><!-- Catalogue-->
+                <div class="row">
+                    <section class="BestProduct col-lg-12 col-md-12"  >
+                        <h2 class="FirstHead">Catalogue</h2>
+                        <article class="col-lg-3 product"> <!--Produit n°1 - Le sabre laser de Dark Vader - Star Wars -->
+                            <img class="mainPict" title="Le sabre laser de Dark Vader - Star Wars" alt="Le sabre laser de Dark Vader - Star Wars" src="bower_components/images/sabrelaser2.jpg" />
+                            <h3>Le sabre laser de Dark Vader - Star Wars</h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°1 - Le sabre laser de Dark Vader - Star Wars -->
+
+                        <article class="col-lg-3"> <!--Produit n°2 - Le vélo d'Elliott - E.T-->
+                            <img class="mainPict" title="Le vélo d'Elliott - E.T" alt="Le vélo d'Elliott - E.T" src="bower_components/images/et_moon2.jpg" />
+                            <h3><a href="#">Le vélo d'Elliott - <br>E.T</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°2 - La planche de Rose Dawson - Titanic -->
+
+                        <article class="col-lg-3"> <!--Produit n°3 - L'anneau de Soron - Le Seigneur des Anneaux-->
+                            <img class="mainPict" title="L'anneau de Soron - Le Seigneur des Anneaux" alt="L'anneau de Soron - Le Seigneur des Anneaux" src="bower_components/images/anneau.jpeg" />
+                            <h3>L'anneau de Soron - Le Seigneur des Anneaux</h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°3 - Le rasoir de Mr. Brown - Reservoir Dogs -->
+
+                        <article class="col-lg-3"> <!--Produit n°4 - La voiture de Walt Kowalski - Gran Torino -->
+                            <img class="mainPict" title="La voiture de Walt Kowalski - Gran Torino" alt="La voiture de Walt Kowalski - Gran Torino" src="bower_components/images/grantorino.jpg" />
+                            <h3><a href="#">La voiture de Walt Kowalski - Gran Torino</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°4 - La voiture de Walt Kowalski - Gran Torino -->
+
+                    </section>
+                </div>
+
+                <div class="row">   <!-- Deuxième ligne du Catalogue-->
+                    <div class="FirstHead col-lg-12 col-md-12"></div>
+                    <section class="BestProduct">
+                        <article class="col-lg-3 "> <!--Produit n°1 - La 7eme Dragon Ball - Dragon Ball-->
+                            <img class="mainPict" title="La 7eme Dragon Ball - Dragon Ball" alt="La 7eme Dragon Ball - Dragon Ball" src="bower_components/images/dragonball.jpeg" />
+                            <h3>La 7eme Dragon Ball - Dragon Ball</h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°1 - La 7eme Dragon Ball - Dragon Ball-->
+
+                        <article class="col-lg-3"> <!--Produit n°2 - Iorek Byrnison - Le Monde de Narnia-->
+                            <img class="mainPict" title="Iorek Byrnison - Le Monde de Narnia" alt="Iorek Byrnison - Le Monde de Narnia" src="bower_components/images/iorek.jpeg" />
+                            <h3><a href="#">Iorek Byrnison -<br> Le Monde de Narnia</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°2 - Iorek Byrnison - Le Monde de Narnia -->
+
+                        <article class="col-lg-3"> <!--Produit n°3 - Les cheveux de Charles Xavier - X-MEN-->
+                            <img class="mainPict" title="Les cheveux de Charles Xavier - X-MEN" alt="Les cheveux de Charles Xavier - X-MEN" src="bower_components/images/CX.jpeg" />
+                            <h3>Les cheveux de Charles Xavier - X-MEN</h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°3 - Les cheveux de Charles Xavier - X-MEN -->
+
+                        <article class="col-lg-3"> <!--Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+                            <img class="mainPict" title="La clé de la Porte Rouge - 50 Nuances de Grey" alt="La clé de la Porte Rouge - 50 Nuances de Grey" src="bower_components/images/clés502.jpg" />
+                            <h3><a href="#">La clé de la Porte Rouge - 50 Nuances de Grey</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+
+                    </section>
+                </div><!-- Fin Deuxième ligne du Catalogue-->
+
+                <div class="row">   <!-- Troisième ligne du Catalogue-->
+                    <div class="FirstHead col-lg-12 col-md-12"></div>
+                    <section class="BestProduct">
+                        <article class="col-lg-3 "> <!--Produit n°1 - La Dolorean - Retour vers le future-->
+                            <img class="mainPict" title="La Dolorean - Retour vers le future" alt="La Dolorean - Retour vers le future" src="bower_components/images/Dolorean.jpg" />
+                            <h3>La Dolorean - Retour vers le future</h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°1 - La Dolorean - Retour vers le future-->
+
+                        <article class="col-lg-3"> <!--Produit n°2 - Iorek Byrnison - Le Monde de Narnia-->
+                            <img class="mainPict" title="Iorek Byrnison - Le Monde de Narnia" alt="Iorek Byrnison - Le Monde de Narnia" src="bower_components/images/iorek.jpeg" />
+                            <h3><a href="#">Iorek Byrnison -<br> Le Monde de Narnia</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°2 - Iorek Byrnison - Le Monde de Narnia -->
+
+                        <article class="col-lg-3"> <!--Produit n°3 - Les cheveux de Charles Xavier - X-MEN-->
+                            <img class="mainPict" title="Les cheveux de Charles Xavier - X-MEN" alt="Les cheveux de Charles Xavier - X-MEN" src="bower_components/images/CX.jpeg" />
+                            <h3>Les cheveux de Charles Xavier - X-MEN</h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°3 - Les cheveux de Charles Xavier - X-MEN -->
+
+                        <article class="col-lg-3"> <!--Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+                            <img class="mainPict" title="La clé de la Porte Rouge - 50 Nuances de Grey" alt="La clé de la Porte Rouge - 50 Nuances de Grey" src="bower_components/images/clés502.jpg" />
+                            <h3><a href="#">La clé de la Porte Rouge - 50 Nuances de Grey</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+
+                    </section>
+                </div><!-- Fin Troisième ligne du Catalogue-->
+
+                <div class="row">   <!-- Quatrième ligne du Catalogue-->
+                    <div class="FirstHead col-lg-12 col-md-12"></div>
+                    <section class="BestProduct">
+                        <article class="col-lg-3 col-md-3 col-sm-12 col-xs-12 product"> <!--Produit n°1 - La malette de Marcelus Wallace - Pulp Fiction -->
+                            <img class="mainPict" title="La malette de Marcelus Wallace - Pulp Fiction" alt="La malette de Marcelus Wallace - Pulp Fiction" src="bower_components/images/Malette_pulp_fiction2.jpg" />
+                            <h3><a href="#">La malette de Marcelus Wallace - Pulp Fiction</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°1 - La malette de Marcelus Wallace - Pulp Fiction -->
+
+                        <article class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> <!--Produit n°2 - La planche de Rose Dawson - Titanic-->
+                            <img class="mainPict" title="La planche de Rose Dawson - Titanic" alt="La planche de Rose Dawson - Titanic" src="bower_components/images/leoplanche2.jpeg" />
+                            <h3><a href="#">La planche de Rose Dawson - Titanic</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°2 - La planche de Rose Dawson - Titanic -->
+
+                        <article class="col-lg-3"> <!--Produit n°3 - Le rasoir de Mr. Brown - Reservoir Dogs -->
+                            <img class="mainPict" title="Le rasoir de Mr. Brown - Reservoir Dogs" alt="Le rasoir de Mr. Brown - Reservoir Dogs" src="bower_components/images/reservoirdogs42.jpg" />
+                            <h3><a href="#">Le rasoir de Mr. Brown - Reservoir Dogs</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla  </p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°3 - Le rasoir de Mr. Brown - Reservoir Dogs -->
+
+                        <article class="col-lg-3"> <!--Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+                            <img class="mainPict" title="La clé de la Porte Rouge - 50 Nuances de Grey" alt="La clé de la Porte Rouge - 50 Nuances de Grey" src="bower_components/images/clés502.jpg" />
+                            <h3><a href="#">La clé de la Porte Rouge - 50 Nuances de Grey</a></h3>
+                            <p> Bla Bla BLa Bla Bla BLa Bla</p>
+                            <a href="#" class="price btn btn-default">300€</a>
+                            <a href="#" class=" btn btn-default"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Ajouter au panier</a>
+                        </article><!-- fin Produit n°4 - La clé de la Porte Rouge - 50 Nuances de Grey -->
+                    </section>
+                </div><!-- Fin Quatrième ligne du Catalogue-->
+            </div> <!-- Fin de la page Catalogue -->
+
+            <!-- Page Contact -->
+            <div id="Contact" style="display: none">
+                <h3 class="col-md-offset-1 Title"><i class="fa fa-users icons"></i> Nous Contacter </h3>
+                <form>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group">
+                                <label for="FullnameForm">Nom et Prénom</label><input id="FullnameForm" class="form-control" type="text" placeholder="Entrez votre Nom et Prénom">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="CompanyForm">Entreprise</label><input id="CompanyForm" class="form-control" type="text" placeholder="Entrez votre Entreprise">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group">
+                                <label for="EmailForm">Email</label><input id="EmailForm" class="form-control" type="email" placeholder="Entrez votre Email">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="PhoneForm">Numéro de téléphone </label><input id="PhoneForm" class="form-control" type="text" placeholder="Entrez votre numéro">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 form-group">
+                        <label for="MessageForm">Message</label>
+                        <textarea id="MessageForm" class="form-control" placeholder="Entrez votre Message" rows="8"></textarea>
+                    </div>
+                    <button class="btn btn-flat btn-lg col-md-offset-1" id="send" type="submit"> <i class="fa fa-paper-plane "></i> Envoyer</button>
+                </form>
+            </div>
+            <!-- Fin page Contact-->
+
+
+        </div> <!-- Fin container-fluid-->
+
+
+        <footer>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4 text-center" id="contenu_footer">
+                        <h3>Venez nous rendre visite!</h3>
+                        <p>Hollywood JAMS<br>21 Jump Street<br>Zone 51<br>555-0156874963</p>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <p>Hollywood JAMS 2016 - © Copyright JAMS Corp..<br></p>
+                    </div>
+                </div><!--class "row" du footer-->
+            </div><!--container-fluid du footer-->
+        </footer>
+        <script>
+            $(document).ready(function () {
+                $('#send').click(function () {
+                    var cClass = new Class;
+                    cClass.FullnameForm = $('#FullnameForm').val();
+                    cClass.CompanyForm = $('#CompanyForm').val();
+                    cClass.EmailForm = $('#EmailForm').val();
+                    cClass.PhoneForm = $('#PhoneForm').val();
+                    cClass.CheckEmail(cClass.EmailForm);
+                    cClass.CheckName(cClass.FullnameForm);
+                    cClass.CheckPhone(cClass.PhoneForm);
+                });
+            });
+
+            function afficher() {
+            var aff = document.getElementById('Contact');
+            if (aff.style.display == "none") {
+              aff.style.display = "block";
+            } else {
+              aff.style.display = "none";
+            }
+            var aff = document.getElementById('Catalogue');
+            if (aff.style.display == "none") {
+              aff.style.display = "block";
+            } else {
+              aff.style.display = "none";
+            }
+          }
+        </script>
+
+    </body>
+</html>

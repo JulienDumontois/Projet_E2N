@@ -1,0 +1,50 @@
+/*========Header=========== */
+.back{
+    background-color: #A6A5AD;
+}
+.user-link{
+   text-align: right;
+   padding-top: 20px;
+   padding-bottom: 15px;
+}
+.pixHeader{
+    width: 500px;
+}
+/*Menu navbar*/
+.pixHeader{
+    padding-bottom: 10px;
+}
+
+/*========fin Header=========*/
+
+/* Produit Phares && Catalogue*/
+.FirstHead{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+.BestProduct{
+  padding-top: 50px; 
+
+}
+
+.product{
+   padding-bottom: 50px;
+}
+.btn-default{
+    background: #A3C2BD ;
+}
+/*Fin Produit Phare*/
+.mainPict {
+    width: 250px;
+}
+
+#contenu_footer{
+    background-color: grey;
+}
+.zbla {
+    padding-top: 15px;
+}
+.footer {
+    padding-top: 15px;
+}

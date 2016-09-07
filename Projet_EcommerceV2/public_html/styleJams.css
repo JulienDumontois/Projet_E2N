@@ -1,0 +1,93 @@
+
+/*Header*/
+.back{
+    background-color: #A6A5AD;
+}
+.user-link{
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.pixHeader{
+    width: 500px;
+}
+
+/*page nos produits*/
+
+.FirstHead{
+    font-size: 50px;
+    color: #A6A5AD;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: 50px;
+    font-family: 'Lobster', cursive;
+    text-shadow:2px 2px #333333;
+    text-decoration: underline;
+}
+.Product{
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+.mainPict {
+    width: 250px;
+    border-radius: 15px;
+}
+.btn-Jams{
+    background: #A3C2BD;
+    color:#ffffff;
+}
+
+/*Fin de Page Nos Produits*/
+/*Nous contacter*/
+.Title{
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.jamsCorp{
+    font-size: 80px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    text-shadow:2px 2px white;
+}
+.jamsCorp1{
+    font-size: 80px;
+    font-family: 'Lobster', cursive;
+    padding-left: 190px;
+    padding-top: 50px;
+    text-shadow:2px 2px white;
+}
+
+.title{
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    color: #333333;
+    text-align: right;
+    font-weight: bold;
+    text-shadow:1.2px 1.2px white;
+}
+.paragraphe{
+    font-size: 20px;
+    padding-top: 47px;
+    padding-left: 100px;
+    color: #333333; 
+    font-weight: bold;
+    text-shadow:1.2px 1.2px white;
+}
+#contenu_footer{
+    background-color: grey;
+}
+
+.footer {
+    padding-top: 15px;
+}
+
+/*FICHES PRODUITS*/
+.TitleinMiddle{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.productFiles{
+    padding-bottom: 50px;
+}
+/*/. FICHES PRODUITS*/

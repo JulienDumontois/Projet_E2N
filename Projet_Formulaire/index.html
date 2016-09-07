@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fiches Contacts.</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <script src="assets/jquery-2.2.4.js"></script>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-xs-12">
+        <h1>Contacts > </h1>
+        <h2>&nbsp;Créer un contact</h2>
+      </div>
+    </div>
+
+    <form>
+      <fieldset>
+
+        <!--NOM / PRENOM -->
+        <div class="row">
+          <div class="col-lg-5  col-xs-12 nom">
+            <label for="texte">Votre nom :</label>
+            <input id="nom" type="text" class="form-control">
+          </div>
+          <div class="col-lg-offset-2 col-lg-5  col-xs-12 prenom">
+            <label for="texte">Votre prénom :</label>
+            <input id="prenom" type="text" class="form-control">
+          </div>
+        </div>
+        <!--ADRESSE -->
+        <div class="row">
+          <div class="col-lg-12 col-xs-12 adresse">
+            <label for="texte">Votre adresse :</label>
+            <input id="adresse" type="text" class="form-control">
+          </div>
+        </div>
+        <!--PHONE / MAIL -->
+        <div class="row">
+          <div class="col-lg-5 col-sm-12  col-xs-12 phone">
+            <label for="texte">Votre téléphone :</label>
+            <input id="phone" type="text" class="form-control">
+          </div>
+          <div class="col-lg-offset-2 col-lg-5 col-xs-12 mail">
+            <label for="texte">Votre email :</label>
+            <input id="mail" type="text" class="form-control">
+          </div>
+        </div><hr/>
+        <!--AJOUTER-->
+        <div class="row">
+          <div class="col-lg-12 col-xs-12">
+            <a  id="ajout" name="ajouter" class="btn btn-success">Ajouter</a>
+
+          </div>
+        </div><hr/>
+
+      </fieldset>
+    </form>
+
+  </div>
+  <!--REPONSES FORMULAIRE-->
+
+  <script>
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var sweetColor = '#';
+    for (var i = 0; i < 6; i++) {
+      sweetColor += letters[Math.floor(Math.random() * 16)];
+    }
+    return sweetColor;
+  }
+
+  $(document).ready(function () {
+    $('#ajout').click(function () {
+      nom = $("#nom").val();
+      prenom = $("#prenom").val();
+      adresse = $("#adresse").val();
+      phone = $("#phone").val();
+      mail = $("#mail").val();
+      var uniqueid = Date.now();
+
+      $('form').append('<div id="M' + uniqueid + '"><div>' + '<p>' + 'Mon nom : ' + nom + '</p>' + '</div>' + '<div>' + '<p>' + 'Mon prénom : ' + prenom + '</p>' + '</div>' + '<div>' + '<p class="addr">' + 'Mon adresse : ' + adresse + '</p>' + '</div>' + '<div>' + '<p>' + 'Mon numéro : ' + phone + '</p>' + '</div>' + '<div>' + '<p>' + 'Mon mail : ' + mail + '</p>' + '</div> </div>' + '<hr/>');
+      $('input.form-control').val(null);
+      $("#M" + uniqueid).css('background-color', getRandomColor());
+      $("#M" + uniqueid).css('border-radius','10px');
+      $("#M" + uniqueid).css('margin','auto');
+      $("#M" + uniqueid).css('padding-left','30px');
+      $("#M" + uniqueid).width(600);
+      $("#M" + uniqueid).height(80);
+
+      $('div p').addClass('col-lg-6');
+      $('addr').addClass('col-lg-12');
+
+      $("#M" + uniqueid).mouseover(function(){
+        $(this).width(620);
+        $(this).height(100);
+
+        $("#M" + uniqueid).mouseout(function(){
+          $(this).width(600);
+          $(this).height(80);
+        });
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>
